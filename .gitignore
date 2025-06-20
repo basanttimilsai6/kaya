@@ -192,3 +192,32 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+
+# Python
+*.pyc
+__pycache__/
+
+# Environment
+.env
+firebase_credentials.json
+# Django
+db.sqlite3
+/media/
+staticfiles/
+
+# VS Code
+.vscode/
+
+# Docker
+*.log
+*.pid
+
+# Migrations
+**/migrations/*.py
+**/migrations/__pycache__/
+
+# Node (if any frontend)
+node_modules/
+build/
+dist/
