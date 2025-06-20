@@ -3,7 +3,7 @@ version: "3.9"
 services:
   web:
     build: .
-    command: gunicorn sports.wsgi:application --bind 0.0.0.0:8000 --timeout 120
+    command: gunicorn kaya.wsgi:application --bind 0.0.0.0:8000 --timeout 120
     volumes:
       - .:/app
     ports:
@@ -12,7 +12,7 @@ services:
       - db
       - redis
     environment:
-      - DJANGO_SETTINGS_MODULE=sports.settings
+      - DJANGO_SETTINGS_MODULE=kaya.settings
     networks:
       - backend
     env_file:
@@ -38,7 +38,7 @@ services:
 
   celery:
     build: .
-    command: celery -A sports worker --loglevel=info
+    command: celery -A kaya worker --loglevel=info
     volumes:
       - .:/app
     depends_on:

@@ -14,4 +14,4 @@ def check_hash(user_input, hashed_data):
     return bcrypt.checkpw(user_input_bytes, hashed_bytes)
     
 def generate_otp():
-    return str(random.randint(1000,9999))
+    return str(random.randint(100000,999999))

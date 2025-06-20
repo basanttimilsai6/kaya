@@ -24,4 +24,4 @@ COPY . .
 # COPY ./wait-for-it.sh /wait-for-it.sh
 # RUN chmod +x /wait-for-it.sh
 
-# CMD ["gunicorn", "sports.wsgi:application", "--bind", "0.0.0.0:8000"]
+# CMD ["gunicorn", "kaya.wsgi:application", "--bind", "0.0.0.0:8000"]
